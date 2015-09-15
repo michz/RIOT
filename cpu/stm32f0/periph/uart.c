@@ -133,6 +133,8 @@ int uart_init_blocking(uart_t uart, uint32_t baudrate)
             UART_1_PORT_CLKEN();
             break;
 #endif
+        default:
+            return -2;
     }
 
     /* configure RX and TX pins, set pin to use alternative function mode */
